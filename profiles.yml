@@ -1,0 +1,9 @@
+foo:
+  outputs:
+    dev:
+      type: databricks
+      schema: foo
+      host: {{ env_var('HOST') }}
+      http_path: {{ env_var('CLUSTER') }}
+      token: {{ env_var('TOKEN') }}
+  target: dev
